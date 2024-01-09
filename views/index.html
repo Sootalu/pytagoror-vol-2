@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pythagorean Theorem Calculator</title>
+</head>
+<body>
+  <h1>Pythagorean Theorem Calculator</h1>
+
+  {% if result %}
+    <p>Result: {{ result }}</p>
+  {% endif %}
+
+  <form action="/calculate" method="post">
+    <label for="sideA">Side A:</label>
+    <input type="number" name="sideA" required>
+
+    <label for="sideB">Side B:</label>
+    <input type="number" name="sideB" required>
+
+    <button type="submit">Calculate</button>
+  </form>
+</body>
+</html>
